@@ -1,0 +1,251 @@
+/* 全局样式初始化 */
+* {
+  /*清除元素默认外边距*/
+  margin: 0;
+   /*清除元素默认内边距*/
+  padding: 0;
+  /*设置盒模型*/
+  box-sizing: border-box;
+}
+
+body {
+  /*设置字体*/
+  font-family: "Microsoft YaHei", sans-serif;
+  /*设置行高*/
+  line-height: 1.6;
+  /*文字默认颜色*/
+  color: #333333f9;
+  /*设置背景颜色*/
+  background-color: aqua;
+}
+
+/* 头部样式 */
+.site-header {
+  /*头部背景色*/
+  background-color: #0b6b3a;
+  /*头部文字颜色*/
+  color: #ffffff;
+  /*上下内边距10px，左右内边距20px*/
+  padding: 10px 20px;
+}
+
+/*头部顶部布局*/
+.header-top {
+  /*使用flex布局，开启弹性和模式*/
+  display: flex;
+  /*子元素在垂直方向上居中对齐*/
+  align-items: center;
+}
+
+/*站点标题样式*/
+.site-title {
+  /*设置字体大小*/
+  font-size: 24px;
+  /*自动占据剩余空间，让导航菜单靠右排列*/
+  margin-right: auto;
+}
+
+/*主导航菜单样式*/
+.main-nav ul {
+  /*清除列表默认项目符号*/
+  list-style: none;
+  /*使用flex布局，让导航项横向排列*/
+  display: flex;
+  /*设置顶部外边距*/
+  margin-top: 10px;
+}
+
+/* 导航菜单项样式（li 标签）作用：控制每个菜单项之间的右侧间距，避免挤在一起 */
+.main-nav li {
+/* 导航菜单项样式（li 标签）作用：控制每个菜单项之间的右侧间距，避免挤在一起 */
+  margin-right: 20px;
+}
+
+/*  banner 区域样式 */
+.banner {
+  width: 100%;
+  /* 溢出内容隐藏*/
+  overflow: hidden;
+}
+
+/*banner图片样式*/
+.banner-img {
+  /* 宽度 100%，让图片适应 banner 容器宽度 */
+  width: 100%;
+  /* 固定图片高度为 180px，可根据设计需求调整 */
+  height: 180px;
+  /* 将图片转为块级元素，清除底部可能出现的空白间隙（图片默认 inline 元素特性） */
+  display: block;
+}
+
+/* banner 标题样式作用：设置 banner 标题的对齐方式、内边距、背景色和字体大小 3*/
+.banner-title {
+  /* 文字左对齐，符合常见标题排版习惯 */
+  text-align: left; 
+  /* 上下左右设置 20px 内边距，让标题文字与边框有间距 */
+  padding: 20px; 
+  /* 背景色设为黄绿色（yellowgreen），突出标题区域 */
+  background-color: yellowgreen; 
+  /* 字体大小设为 20px，让标题更醒目 */
+  font-size: 20px; 
+}
+
+/* 内容区域整体容器样式*/
+.content {
+  /* 给内容区域设置 20px 的内边距，让内容与容器边缘有间距 */
+  padding: 20px; 
+  /* 最大宽度限制为 1200px，避免内容在宽屏上过于分散 */
+  max-width: 1200px; 
+  /* 左右自动外边距，实现内容在页面水平居中 */
+  margin: 0 auto; 
+}
+
+/* 内容区域 h3 标题样式*/
+.content h3 {
+  /* 字体大小设为 20px，突出标题层级 */
+  font-size: 20px; 
+  /* 标题下方设置 10px 外边距，与下方内容拉开距离 */
+  margin-bottom: 10px; 
+  /* 文字颜色设置为 #0b6b3a（深绿色），强调标题 */
+  color: #0b6b3a; 
+}
+
+/* 个人信息卡片容器样式（.profile-box）*/
+.profile-box {
+  /* 文字左对齐，符合常规排版习惯 */
+  text-align: left; 
+  /* 底部设置 20px 外边距，与下方模块分隔开 */
+  margin-bottom: 20px; 
+}
+
+/* 头像样式（.avatar）作用：设置头像的尺寸、圆形效果和底部间距，让头像显示更美观 */
+.avatar {
+  /* 宽度和高度均为 150px，让头像呈现正方形 */
+  width: 150px; 
+  height: 150px; 
+  /* 边框圆角设为 50%，将正方形转为圆形头像 */
+  border-radius: 50%; 
+  /* 底部设置 10px 外边距，与下方文字内容分隔 */
+  margin-bottom: 10px; 
+}
+
+/* 爱好项目卡片样式（.hobby-item）*/
+.edu-item,
+.hobby-item {
+  /* 底部设置 20px 外边距，多个爱好项之间保持间隔 */
+  margin-bottom: 20px; 
+  /* 添加 1px 实线边框，颜色为 rgba，区分不同爱好项 */
+  border: 1px solid rgba(0, 68, 255, 0.451); 
+  /* 内边距设为 15px，让爱好内容与边框有间距 */
+  padding: 15px; 
+  /* 边框圆角设为 5px，让卡片更柔和 */
+  border-radius: 5px; 
+}
+
+/* 为.hobby-item 下的 h3 标签设置样式  作用：给爱好项目中的标题 h3 设置底部外边距，控制与下方元素的间距*/
+.edu-item h4,
+.hobby-item h3 {
+  margin-bottom: 15px; 
+}
+
+/* 为.hobby-img 类选择器设置样式 */
+.hobby-img {
+  max-width: 100px; /* 限制图片最大宽度为 100px，保证在不同容器中不会过宽 */
+  height: auto; /* 高度自动调整，保持图片原有宽高比 */
+  margin-top: 10px; /* 给图片添加上方外边距，与上方元素拉开距离 */
+  border-radius: 5px; /* 让图片 corners 变成圆角，增强视觉效果 */
+  object-fit: cover; /* 当图片容器尺寸与图片本身尺寸不一致时，裁剪图片以覆盖整个容器，同时保持宽高比 */
+}
+
+/* 左侧部分样式 */
+.left-section {
+  /* 让左侧占据容器约 60% 的宽度，可根据内容调整比例 */
+  width: 60%; 
+  /* 给左侧内容设置背景色，方便区分，可根据实际需求修改或删除 */
+  background-color: #d9f0ff; 
+  /* 设置内边距，让文字与边框有距离 */
+  padding: 15px; 
+  /* 让边框变成圆角，数值越大越圆，可根据喜好调整 */
+  border-radius: 8px; 
+}
+
+/* 右侧部分样式 */
+.right-section {
+  /* 让右侧占据容器约 60% 的宽度，可根据内容调整比例 */
+  width: 60%; 
+  /* 给右侧内容设置背景色，方便区分，可根据实际需求修改或删除 */
+  background-color: #f9f0d9; 
+  /* 设置内边距，让文字与边框有距离 */
+  padding: 15px; 
+  /* 让边框变成圆角，数值越大越圆，可根据喜好调整 */
+  border-radius: 8px;
+}
+
+/* 
+  表单容器整体样式 
+  用于包裹整个表单区域，设置背景、内边距、外边距等基础布局
+*/
+.form-section {
+  background-color: #d9f3e9; /* 浅绿背景，与页面现有色调呼应，营造和谐视觉效果 */
+  padding: 20px; /* 内边距，让表单内容与容器边缘保持距离，避免拥挤 */
+  margin: 20px 0; /* 上下外边距 20px，左右无，用于控制表单与其他模块的间距 */
+  border-radius: 8px; /* 圆角，使容器边角更圆润，增强美观度 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 阴影，增加层次感，让表单区域微微“浮起” */
+}
+
+/* 表单内标题 h2 样式 */
+.form-section h2 {
+  margin-bottom: 15px; /* 底部外边距，与下方表单元素拉开距离，优化排版 */
+  color: #0b6b3a; /* 文字颜色，选用与页面主题适配的绿色，保持风格统一 */
+}
+
+/* 表单标签 label 样式 */
+.form-section label {
+  display: inline-block; /* 行内块元素，既可以和其他元素在一行，又能设置宽高等 */
+  width: 80px; /* 固定宽度，让标签对齐整齐 */
+  text-align: right; /* 文字右对齐，方便和右侧输入框配合排版 */
+  margin-right: 10px; /* 右侧外边距，与输入框保持间隔 */
+}
+
+/* 文本输入框（text、email 类型）和文本域 textarea 通用样式 */
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section textarea {
+  width: 60%; /* 宽度占父容器（.form-section）的 60%，适配布局 */
+  padding: 8px; /* 内边距，让输入内容与边框有间距，输入体验更好 */
+  margin-bottom: 12px; /* 底部外边距，控制每个输入项之间的垂直间距 */
+  border: 1px solid #ccc; /* 灰色边框，作为输入框的基础轮廓 */
+  border-radius: 4px; /* 输入框圆角，和容器圆角风格呼应 */
+}
+
+/* 提交按钮（submit 类型）样式 */
+.form-section input[type="submit"] {
+  background-color: #0b6b3a; /* 按钮背景色，选用主题绿色，突出重要性 */
+  color: white; /* 文字为白色，与绿色背景形成对比，清晰可见 */
+  padding: 10px 20px; /* 内边距，控制按钮大小，让点击区域合适 */
+  border: none; /* 去掉默认边框，让按钮风格更简洁 */
+  border-radius: 4px; /* 按钮圆角，和整体风格统一 */
+  cursor: pointer; /* 鼠标悬停时显示手型，提示可点击 */
+  margin-left: 90px; /* 左侧外边距，与 label 宽度对齐，保持排版整齐 */
+}
+
+/* 提交按钮 hover 状态样式 */
+.form-section input[type="submit"]:hover { 
+  background-color: #084f2c; /* 改变背景色，加深绿色，提示用户当前交互状态 */
+}
+
+/* 底部样式 */
+footer {
+  /* 设置背景颜色，让底部区域呈现特定色调 */
+  background-color: #0b6b3a; 
+  /* 让底部区域内的文本水平居中显示，使内容排版更规整 */
+  text-align: center; 
+  /* 设置内边距，*/
+  padding: 10px; 
+  /* 固定定位，使 footer 脱离正常文档流，*/
+  position: fixed; 
+  /* 让 footer 宽度占满整个视口宽度 */
+  width: 100%; 
+  /* 结合 position: fixed，将 footer 固定在视口底部，数值 0 表示距离底部边界为 0，实现始终在页面最下方显示 */
+  bottom: 0; 
+}
